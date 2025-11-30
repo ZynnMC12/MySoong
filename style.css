@@ -1,0 +1,207 @@
+/* ========= GLOBAL RESET ========= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #fdf2ff, #f8faff, #fff6f8);
+    background-size: 300% 300%;
+    animation: gradientMove 12s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ========= NAVBAR ========= */
+#navbar {
+    width: 100%;
+    max-width: 750px;
+    margin: 20px auto 0;
+    padding: 12px 22px;
+    background: rgba(255,255,255,0.45);
+    backdrop-filter: blur(15px);
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar .logo {
+    height: 48px;
+    width: 48px;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+#navbar .restart {
+    font-size: 15px;
+    text-decoration: none;
+    color: #6a4ee6;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 14px;
+    background: #ffffff90;
+    backdrop-filter: blur(4px);
+    transition: 0.25s ease;
+}
+
+#navbar .restart:hover {
+    background: #6a4ee6;
+    color: white;
+}
+
+/* ========= CONTENT BOX ========= */
+#content {
+    width: 100%;
+    max-width: 750px;
+    margin-top: 30px;
+    padding: 35px 30px;
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(18px);
+    border-radius: 26px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    animation: fadeIn 0.7s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========= TITLE ========= */
+#ucapan {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #6a4ee6;
+    margin-bottom: 18px;
+}
+
+/* ========= COUNTER ========= */
+#count {
+    font-size: 54px;
+    font-weight: 700;
+    width: 140px;
+    padding: 16px 0;
+    margin: 0 auto 25px;
+    border-radius: 16px;
+
+    background: white;
+    color: #6a4ee6;
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+/* ========= BUTTONS ========= */
+.button {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.tombol {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #7d5bff, #b28bff);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(155, 120, 255, 0.35);
+    transition: 0.25s ease;
+}
+
+.tombol:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* ========= SONG LIST ========= */
+#songList {
+    margin-top: 32px;
+    list-style: none;
+
+    background: rgba(255,255,255,0.65);
+    backdrop-filter: blur(14px);
+    padding: 22px;
+    border-radius: 18px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+#songList li {
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #6a4ee6;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+#songList li:last-child {
+    border-bottom: none;
+}
+
+/* ========= WARNING TEXT ========= */
+#warning {
+    margin-top: 18px;
+    padding: 14px;
+
+    font-weight: 600;
+    color: #b80606;
+    background: #ffbcbc;
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+/* ========= FOOTER ========= */
+.footer .warning {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 18px;
+
+    padding: 14px 22px;
+    background: #ffe8e8;
+    border-radius: 14px;
+    color: #a30000;
+    font-weight: 600;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* ========= JUMPSCARE IMAGE (elegant) ========= */
+#hantu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 95vh;
+    display: none;
+    z-index: 99999;
+
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+
+    animation: zoom 0.18s ease-out;
+}
+
+@keyframes zoom {
+    0% { transform: translate(-50%, -50%) scale(0.2); opacity: 0; }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}

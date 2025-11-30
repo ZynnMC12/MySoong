@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Nabila's Soong</title>
+</head>
+<body>
+    <div class="all">
+        <div class="navbar">
+            <nav id="navbar">
+                <img class="logo" src="assets/bila.jpg
+            " alt="">
+                <a href="#" class="restart" onclick="reRender()">RESTART</a>
+            </nav>   
+        </div>
+        <div id="content">
+            <h1 id="ucapan">Jangan lupa Nabila Vibes<3</h1>
+            <div class="center-content">
+                <p id="count" >0</p>
+            <audio src="assets/screamer-jumpscare.mp3" id="screamVoice">
+            </audio>
+            <audio src="assets/Djo - End of Beginning (Official Lyric Video)_EoVQ_TQFJy0.mp3" id="lagu1"></audio>
+            <audio src="assets/In The End [Official HD Music Video] - Linkin Park_eVTXPUF4Oz4.mp3" id="lagu2"></audio>
+            <audio src="assets/Keane - Somewhere Only We Know (Lyrics)_2lh_fR6aiL0.mp3" id="lagu3"></audio>
+            <audio src="assets/Lukas Graham - 7 Years [Official Music Video]_LHCob76kigA.mp3" id="lagu4"></audio>
+            <audio src="assets/MAGIC_ - Rude (Lyrics)_NoEMIVx4J78.mp3" id="lagu5"></audio>
+            <audio src="assets/Maroon 5 - Memories (Official Video)_SlPhMPnQ58k.mp3" id="lagu6"></audio>
+            <audio src="assets/Maroon 5 Ft. Wiz Khalifa - Payphone (Lyrics)_H_meGnWdMCM.mp3" id="lagu7"></audio>
+            <audio src="assets/STILL-THE-ONE.mp3" id="lagu8"></audio>
+            <audio src="assets/TALKING-TO-THE-MOON(BRUNO MARS).mp3" id="lagu9"></audio>
+    
+            <img src="assets/hantu.jfif" alt="" id="hantu">
+            
+            <div class="button">
+                <button onclick="tombol1()" class="tombol" id="putarLagu">PUTAR LAGU</button>
+                
+                <button onclick="tombol2()" class="tombol" id="kembali">KEMBALI</button>
+            </div>
+            
+            <ul id="songList">
+                <li>Rude</li>
+                <li>Memories</li>
+                <li>Still The One</li>
+                <li>Somewhere Only We Know</li>
+                <li>End of Beginning</li>
+                <li>In The End</li>
+                <li>Payphone(agak lama)</li>
+                <li>7 Years</li>
+                <li>Talking To The Moon</li>
+                <li>Nabila Soong</li>
+            </ul>
+            <p class="text" id="warning">PASTIKAN UNTUK ME-RESTART WEB SAAT SAMPAI NOMER 9 </p>
+            </div>
+    
+            <div class="footer">
+                <H2 class="warning" id="announcement">NAIKKAN VOLUME UNTUK PENGALAMAN TERBAIK</H2>
+            </div>
+        </div>
+    
+    </div>
+
+</body>
+
+<script>
+    let klik = 0;
+    let count = document.getElementById('count')
+    let hantu = document.getElementById('hantu')
+    let screamVoice = document.getElementById('screamVoice')
+    let lagu1 = document.getElementById('lagu5')
+    let lagu2 = document.getElementById('lagu6')
+    let lagu3 = document.getElementById('lagu8')
+    let lagu4 = document.getElementById('lagu3')
+    let lagu5 = document.getElementById('lagu1')
+    let lagu6 = document.getElementById('lagu2')
+    let lagu7 = document.getElementById('lagu7')
+    let lagu8 = document.getElementById('lagu4')
+    let lagu9 = document.getElementById('lagu9')
+    let navbar = document.getElementById('navbar')
+    let ucapan = document.getElementById('ucapan')
+    let songList = document.getElementById('songList')
+    let warning = document.getElementById('warning')
+    let putarLagu= document.getElementById('putarLagu')
+    let pemberitahuan = document.getElementById('announcement')
+    let kembali = document.getElementById('kembali')
+
+    hantu.style.display = 'none';
+    kembali.style.display = 'none';
+
+    function tombol1(){
+        klik += 1;
+        kembali.style.display = 'block';
+        if(klik % 2 == 0){
+            console.log('ganjil');
+            count.textContent = klik;
+        }
+        else if(klik %2 != 0){
+            console.log('genap');
+            count.textContent = klik;
+        }
+        
+        if(klik == 0){
+            lagu1.pause()
+        }
+
+        if(klik == 1){
+            lagu1.currentTime = 0;
+            lagu1.play()
+        }
+        if(klik == 2){
+            lagu2.currentTime = 0;
+            lagu2.play()
+            lagu1.pause()
+        }
+        if(klik == 3){
+            lagu3.currentTime = 0;
+            lagu3.play()
+            lagu1.pause()
+            lagu2.pause()
+        }
+        if(klik == 4){
+            // for (let i =1, i++) {
+            //     lagu(i).pause()
+            // }
+            lagu4.currentTime = 0;
+            lagu4.play()
+            lagu1.pause()
+            lagu2.pause()
+            lagu3.pause()
+        }
+        if(klik == 5){
+            lagu5.currentTime = 0;
+            lagu5.play()
+            lagu1.pause()
+            lagu2.pause()
+            lagu3.pause()
+            lagu4.pause()
+        }
+        if(klik == 6){
+            lagu6.currentTime = 0;
+            lagu6.play()
+            lagu1.pause()
+            lagu2.pause()
+            lagu3.pause()
+            lagu4.pause()
+            lagu5.pause()
+        }
+        if(klik == 7){
+            lagu7.currentTime = 0;
+            lagu7.play()
+            lagu1.pause()
+            lagu2.pause()
+            lagu3.pause()
+            lagu4.pause()
+            lagu5.pause()
+            lagu6.pause()
+        }
+        if(klik == 8){
+            lagu8.currentTime = 0;
+            lagu8.play()
+            lagu1.pause()
+            lagu2.pause()
+            lagu3.pause()
+            lagu4.pause()
+            lagu5.pause()
+            lagu6.pause()
+            lagu7.pause()
+        }
+        if(klik == 9){
+            lagu9.currentTime = 0;
+            lagu9.play()
+            lagu1.pause()
+            lagu2.pause()
+            lagu3.pause()
+            lagu4.pause()
+            lagu5.pause()
+            lagu6.pause()
+            lagu7.pause()
+            lagu8.pause()
+        }
+
+        if(klik == 10){
+            hantu.style.display = 'block';
+            navbar.style.display = 'none';
+            ucapan.style.display ='none';
+            songList.style.display='none';
+            warning.style.display='none';
+            pemberitahuan.style.display='none';
+            putarLagu.style.display='none';
+            count.style.display='none';
+            kembali.style.display="none";
+            console.log('bisa')
+            screamVoice.play();
+            document.body.classList.toggle('dark')
+            lagu1.pause()
+            lagu2.pause()
+            lagu3.pause()
+            lagu4.pause()
+            lagu5.pause()
+            lagu6.pause()
+            lagu7.pause()
+            lagu8.pause()
+            lagu9.pause()
+        }
+        return;
+    };
+
+    function tombol2(){
+        if (klik==1) {
+            kembali.style.display = 'none';
+        }
+        if (klik>0) {
+            klik -= 1;
+        }
+        count.textContent = klik;
+
+        if(klik == 0){
+            lagu1.pause()
+            lagu2.pause()
+            lagu3.pause()
+            lagu4.pause()
+            lagu5.pause()
+            lagu6.pause()
+            lagu7.pause()
+            lagu8.pause()
+            lagu9.pause()
+        }
+
+        if(klik == 1){
+            lagu1.currentTime = 0;
+
+            lagu1.play()
+            lagu2.pause()
+            lagu3.pause()
+            lagu4.pause()
+            lagu5.pause()
+            lagu6.pause()
+            lagu7.pause()
+            lagu8.pause()
+            lagu9.pause()
+        }
+        if(klik == 2){
+             lagu2.currentTime = 0;
+
+            lagu1.pause()
+            lagu2.play()
+            lagu3.pause()
+            lagu4.pause()
+            lagu5.pause()
+            lagu6.pause()
+            lagu7.pause()
+            lagu8.pause()
+            lagu9.pause()
+        }
+        if(klik == 3){
+            lagu3.currentTime = 0;
+
+            lagu1.pause()
+            lagu2.pause()
+            lagu3.play()
+            lagu4.pause()
+            lagu5.pause()
+            lagu6.pause()
+            lagu7.pause()
+            lagu8.pause()
+            lagu9.pause()
+        }
+        if(klik == 4){
+            lagu4.currentTime = 0;
+
+            lagu1.pause()
+            lagu2.pause()
+            lagu3.pause()
+            lagu4.play()
+            lagu5.pause()
+            lagu6.pause()
+            lagu7.pause()
+            lagu8.pause()
+            lagu9.pause()
+        }
+        if(klik == 5){
+            lagu5.currentTime = 0;
+
+            lagu1.pause()
+            lagu2.pause()
+            lagu3.pause()
+            lagu4.pause()
+            lagu5.play()
+            lagu6.pause()
+            lagu7.pause()
+            lagu8.pause()
+            lagu9.pause()
+        }
+        if(klik == 6){
+            lagu6.currentTime = 0;
+
+            lagu1.pause()
+            lagu2.pause()
+            lagu3.pause()
+            lagu4.pause()
+            lagu5.pause()
+            lagu6.play()
+            lagu7.pause()
+            lagu8.pause()
+            lagu9.pause()
+        }
+        if(klik == 7){
+            lagu7.currentTime = 0;
+
+            lagu1.pause()
+            lagu2.pause()
+            lagu3.pause()
+            lagu4.pause()
+            lagu5.pause()
+            lagu6.pause()
+            lagu7.play()
+            lagu8.pause()
+            lagu9.pause()
+        }
+        if(klik == 8){
+            lagu8.currentTime = 0;
+
+            lagu1.pause()
+            lagu2.pause()
+            lagu3.pause()
+            lagu4.pause()
+            lagu5.pause()
+            lagu6.pause()
+            lagu7.pause()
+            lagu8.play()
+            lagu9.pause()
+        }
+        if(klik == 9){
+            lagu9.currentTime = 0;
+
+            lagu1.pause()
+            lagu2.pause()
+            lagu3.pause()
+            lagu4.pause()
+            lagu5.pause()
+            lagu6.pause()
+            lagu7.pause()
+            lagu8.pause()
+            lagu9.play()
+        }
+    }
+
+    function reRender(){
+        location.reload()
+    }
+   
+</script>
+</html>
